@@ -6,7 +6,7 @@ sap.ui.define([
 ], function (Controller, MessageToast, JSONModel, ResourceModel) {
     "use strict";
 
-    return Controller.extend("sap.ui.demo.walkthrough.controller.App", {
+    return Controller.extend("<id>.controller.App", {
         onInit: function () {
             //set the data module in View
             var oData = { recipient: { name: "UI5" } };
@@ -30,6 +30,6 @@ sap.ui.define([
             var sMsg = oBundle.getText("helloMsg", [sRecipient]);
             // show message
             MessageToast.show(sMsg);
-        }
+        },
     });
 });
