@@ -7,7 +7,7 @@ sap.ui.define([
     "use strict";
 
     return Controller.extend("<id>.controller.App", {
-        onInit: function () {
+        /*onInit: function () {
             //set the data module in View
             var oData = { recipient: { name: "UI5" } };
 
@@ -20,7 +20,7 @@ sap.ui.define([
                 bundleName: "sap.ui.demo.walkthrough.i18n.i18n"
             });
             this.getView().setModel(i18nModel, "i18n");
-        },
+        }, */
 
         onShowHello: function () {
 
