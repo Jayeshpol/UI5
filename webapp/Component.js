@@ -21,11 +21,11 @@ sap.ui.define([
          var oModel = new JSONModel(oData);
          this.setModel(oModel);
 
-         // set i18n model
-         var i18nModel = new ResourceModel({
-            bundleName: "sap.ui.demo.walkthrough.i18n.i18n"
-         });
-         this.setModel(i18nModel, "i18n");
+         // // set i18n model
+         // var i18nModel = new ResourceModel({
+         //    bundleName: "sap.ui.demo.walkthrough.i18n.i18n"
+         // });
+         // this.setModel(i18nModel, "i18n");
       }
    });
 });
