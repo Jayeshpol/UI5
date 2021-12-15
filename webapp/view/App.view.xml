@@ -4,27 +4,17 @@
    xmlns:mvc="sap.ui.core.mvc" 
    displayBlock="true">
    <Shell>
-   <App>
+   <App class="myAppDemoWT">
       <pages>
             <Page
                   title="{i18n>homePage1Title}" >
                 <content>
-                    <Panel  headerText="{i18n>helloPage1PanelTitle}" 
+                    <mvc:XMLView viewName="sap.ui.demo.walkthrough.view.HelloPanel"/>
+                    <!-- <Panel  headerText="{i18n>helloPage1Panel2Title}" 
                             class="sapUiResponsiveMargin"
 							width="auto">
-                        <Button 
-                            text="{i18n>showHelloButtonText}" 
-                            press=".onShowHello"
-                            class="sapUiSmallMarginEnd"/>
-                        <Input
-                            value="{/recipient/name}"
-                            description="Hello {/recipient/name}"
-                            valueLiveUpdate="true"
-                            width="60%"/>
-                        <Text
-							text="Hello {/recipient/name}"
-							class="sapUiSmallMargin"/>
-                    </Panel>
+
+                    </Panel> -->
                 </content>
             </Page>
        </pages>
