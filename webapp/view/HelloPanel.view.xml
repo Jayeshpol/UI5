@@ -5,6 +5,12 @@
     <Panel  headerText="{i18n>helloPage1Panel1Title}" 
             class="sapUiResponsiveMargin"
 			width="auto">
+        <content>
+        <Button
+            id="helloDialogButton"
+            text="{i18n>openDialogButtonText}"
+            press=".onOpenDialog"
+            class="sapUiSmallMarginEnd" />
         <Button 
             text="{i18n>showHelloButtonText}" 
             press=".onShowHello"
@@ -17,5 +23,6 @@
         <FormattedText
             htmlText="Hello {/recipient/name}"
             class="sapUiSmallMargin sapThemeHighlight-asColor myCustomText" />
+        </content>
     </Panel>
 </mvc:View>

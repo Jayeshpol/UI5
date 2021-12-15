@@ -1,9 +1,11 @@
 sap.ui.define([
     "sap/ui/core/mvc/Controller",
-    "sap/m/MessageToast"
+    "sap/m/MessageToast",
+    "sap/ui/core/Fragment"
 ], function (
     Controller,
-	MessageToast
+    MessageToast,
+    Fragment
 ) {
     "use strict";
 
@@ -15,6 +17,28 @@ sap.ui.define([
             var sMsg = oBundle.getText("helloMsg", [sRecipient]);
             // show message
             MessageToast.show(sMsg);
+        },
+
+        onOpenDialog: function (oEvent) {
+            var oView = this.getView();
+
+            // create dialog lazily
+            if (!this.byId("helloDialog")) {
+                //Load async XML Fragment
+                Fragment.load({
+                    id: oView.getId(),
+                    name: "sap.ui.demo.walkthrough.view.HelloDialog"
+                }).then(function (oDialog) {
+                    //Connect dialog to the root view of this component 
+                    oView.addDependent(oDialog);
+                    oDialog.open();
+                })
+                // this.pDialog = this.loadFragment({
+                //     name: "sap.ui.demo.walkthrough.view.HelloDialog"
+                // });
+            } else {
+                this.byId("helloDialog").open();
+            }
         }
     });
 });
