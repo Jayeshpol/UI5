@@ -8,13 +8,20 @@
       <pages>
             <Page
                   title="{i18n>homePage1Title}" >
+                  <headerContent>
+                     <Button
+                            icon="sap-icon://hello-world"
+                            press=".onOpenDialog"/>
+                  </headerContent>
                 <content>
                     <mvc:XMLView viewName="sap.ui.demo.walkthrough.view.HelloPanel"/>
-                    <!-- <Panel  headerText="{i18n>helloPage1Panel2Title}" 
+                    <Panel  headerText="{i18n>helloPage1Panel2Title}" 
                             class="sapUiResponsiveMargin"
 							width="auto">
-
-                    </Panel> -->
+                        <Button
+                            icon="sap-icon://hello-world"
+                            press=".onOpenDialog"/>
+                    </Panel>
                 </content>
             </Page>
        </pages>

@@ -20,26 +20,29 @@ sap.ui.define([
         },
 
         onOpenDialog: function (oEvent) {
-            var oView = this.getView();
 
-            // create dialog lazily
-            if (!this.byId("helloDialog")) {
-                //Load async XML Fragment
-                Fragment.load({
-                    id: oView.getId(),
-                    name: "sap.ui.demo.walkthrough.view.HelloDialog",
-                    controller: this
-                }).then(function (oDialog) {
-                    //Connect dialog to the root view of this component 
-                    oView.addDependent(oDialog);
-                    oDialog.open();
-                })
-            } else {
-                this.byId("helloDialog").open();
-            }
-        },
-        onCloseDialog: function (oEvent) {
-            this.byId("helloDialog").close();
+            this.getOwnerComponent().openHelloDialog();
+
+            // var oView = this.getView();
+
+            // // create dialog lazily
+            // if (!this.byId("helloDialog")) {
+            //     //Load async XML Fragment
+            //     Fragment.load({
+            //         id: oView.getId(),
+            //         name: "sap.ui.demo.walkthrough.view.HelloDialog",
+            //         controller: this
+            //     }).then(function (oDialog) {
+            //         //Connect dialog to the root view of this component 
+            //         oView.addDependent(oDialog);
+            //         oDialog.open();
+            //     })
+            // } else {
+            //     this.byId("helloDialog").open();
+            // }
         }
+        // onCloseDialog: function (oEvent) {
+        //     this.byId("helloDialog").close();
+        // }
     });
 });
