@@ -10,6 +10,8 @@ sap.ui.define([], function () {
                     return resourceBundle.getText("invoiceStatusB");
                 case "C":
                     return resourceBundle.getText("invoiceStatusC");
+                case "Foo":
+                    return resourceBundle.getText("invoiceStatusFoo");
                 default:
                     return sStatus;
             }
